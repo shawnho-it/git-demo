@@ -32,5 +32,4 @@ jobs:
           pkill -f app.py || true
           cd ~/flaskapp
           sudo pip3 install -r requirements.txt --break-system-packages
-          (sudo nohup python3 app.py > output.log 2>&1 &) && sleep 1
-
+          sudo systemctl restart flaskapp
